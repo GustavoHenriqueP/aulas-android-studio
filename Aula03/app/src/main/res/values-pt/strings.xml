@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aula03</string>
+    <string name="textoIdioma">Idioma</string>
+    <string name="textoMenu">Menu</string>
+    <string name="textoSair" >Sair</string>
+</resources>
