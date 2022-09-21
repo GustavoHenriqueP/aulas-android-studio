@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="90dp"
         android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="3dp"
         android:layout_marginBottom="4dp"
         android:background="#FFFFFF"
         android:backgroundTint="#2196F3"
@@ -123,20 +123,21 @@
         android:layout_marginBottom="2dp"
         android:background="#FFFFFF"
         android:backgroundTint="#DDDDDD"
+        android:foreground="@drawable/backspace"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetRight="0dp"
         android:insetBottom="0dp"
-        android:text="Apagar"
         android:textColor="#000000"
         android:textColorHighlight="#DFD4D4"
         android:textColorLink="#F1EBEB"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEquals"
         app:layout_constraintEnd_toStartOf="@+id/btnEquals"
         app:layout_constraintStart_toEndOf="@+id/btn0"
-        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnPlus"
@@ -260,7 +261,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
         app:layout_constraintEnd_toStartOf="@+id/btn8"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn8" />
 
     <Button
         android:id="@+id/btnMinus"
@@ -307,7 +309,7 @@
         android:textColorLink="#F1EBEB"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnErase"
         app:layout_constraintEnd_toStartOf="@+id/btnErase"
         app:layout_constraintStart_toEndOf="@+id/btnDot"
         app:layout_constraintTop_toBottomOf="@+id/btn3" />
@@ -368,7 +370,6 @@
         android:layout_width="0dp"
         android:layout_height="90dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="2dp"
         android:background="#FFFFFF"
@@ -383,7 +384,7 @@
         android:textColorLink="#F1EBEB"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btn0"
         app:layout_constraintEnd_toStartOf="@+id/btn0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn0" />
@@ -445,7 +446,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="90dp"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="3dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="2dp"
         android:background="#FFFFFF"
@@ -464,5 +465,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn9" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="0"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
