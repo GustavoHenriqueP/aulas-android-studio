@@ -60,10 +60,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void addExpression(String str, boolean erase_data, View v)
     {
-        if (erase_data && (result.getText().toString().isEmpty() || result.getText().toString().equals(" ")))
+        if (erase_data)
         {
-            result.setText(" ");
-            expression.append(str);
+            if((!result.getText().toString().isEmpty() &&  !result.getText().toString().equals(" ")) && (!expression.getText().toString().isEmpty() &&
+                !expression.getText().toString().contains("+") &&
+                !expression.getText().toString().contains("-") &&
+                !expression.getText().toString().contains("x") &&
+                !expression.getText().toString().contains("/")))
+            {
+                eraseFields(v);
+            }
+            else
+            {
+                result.setText(" ");
+                expression.append(str);
+            }
         }
         else if (!expression.getText().toString().endsWith("+ ") &&
                  !expression.getText().toString().endsWith("- ") &&
