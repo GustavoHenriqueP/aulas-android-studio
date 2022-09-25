@@ -22,6 +22,7 @@
         android:insetTop="0dp"
         android:insetRight="0dp"
         android:insetBottom="0dp"
+        android:onClick="eraseFields"
         android:text="C"
         android:textColor="#000000"
         android:textColorHighlight="#DFD4D4"
@@ -123,11 +124,12 @@
         android:layout_marginBottom="2dp"
         android:background="#FFFFFF"
         android:backgroundTint="#DDDDDD"
-        android:foreground="@drawable/backspace"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetRight="0dp"
         android:insetBottom="0dp"
+        android:onClick="backspace"
+        android:text="←"
         android:textColor="#000000"
         android:textColorHighlight="#DFD4D4"
         android:textColorLink="#F1EBEB"
@@ -328,6 +330,7 @@
         android:insetTop="0dp"
         android:insetRight="0dp"
         android:insetBottom="0dp"
+        android:onClick="showResult"
         android:text="="
         android:textColor="#000000"
         android:textColorHighlight="#DFD4D4"
@@ -467,31 +470,31 @@
         app:layout_constraintStart_toEndOf="@+id/btn9" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtExpression"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="0"
+        android:text=""
+        android:textColor="#000000"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="0"
+        android:text=""
+        android:textColor="#000000"
         android:textSize="36sp"
         android:textStyle="bold"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/txtExpression"
+        app:layout_constraintTop_toBottomOf="@+id/txtExpression" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
